@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {CoreModule} from './core/core.module';
 import {AreasModule} from './areas/areas.module';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import {AreasModule} from './areas/areas.module';
   imports: [
     BrowserModule,
     CoreModule,
-    AreasModule
+    AreasModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

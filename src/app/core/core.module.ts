@@ -1,9 +1,16 @@
 import {NgModule} from '@angular/core';
 import {NavbarComponent} from './components/navbar/navbar.component';
+import {FooterComponent} from './components/footer/footer.component';
 
 @NgModule({
-  declarations: [NavbarComponent],
+  declarations: [
+    NavbarComponent,
+    FooterComponent
+  ],
   imports: [],
-  exports: [NavbarComponent]
+  exports: [
+    NavbarComponent,
+    FooterComponent
+  ]
 })
 export class CoreModule { }

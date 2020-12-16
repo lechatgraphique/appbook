@@ -4,6 +4,7 @@ import {BookInterface} from '../../areas/interfaces/book.interface';
 import {Observable, throwError} from 'rxjs';
 import {catchError, tap} from 'rxjs/operators';
 
+// TODO Injectable
 @Injectable({
   providedIn: 'root'
 })
@@ -13,6 +14,7 @@ export class BookService {
   constructor(private http: HttpClient) { }
   getBooks(): Observable<BookInterface[]> {
     return this.http.get<BookInterface[]>(this.booksUrl)
+      // TODO Pipe()
       .pipe(
         tap(data => console.log('All: ' + JSON.stringify(data))),
         catchError(this.handleError)
